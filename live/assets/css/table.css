@@ -1,0 +1,284 @@
+/* pricing table start */
+.sp_tool_table_sec {
+    background: url(../images/tool_table/bg.webp) no-repeat;
+    background-size: cover;
+}
+.sp_tool_table_Main_wrap {
+    position: relative;
+    max-width: 1300px;
+    margin: auto;
+}
+.sp_tool_table_wrap {
+     width: calc(100% - 191px);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #80D8B4;
+    padding: 5px;
+    box-shadow: 0px 0px 80px 0px #07412D1A;
+    background-color: var(--white-color);
+}
+
+.sp_toolTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+.sp_toolTable td, .sp_toolTable thead th {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222222!important;
+    padding: 25px 5px;
+}
+.sp_toolTable thead th {
+    background: #83E9C0;
+    color: #000;
+    font-weight: 800;
+    font-size: 26px;
+}
+
+
+
+
+.sp_toolTable thead th:first-child {
+    border-radius: 15px 0px 0px 15px;
+    padding-left: 30px;
+}
+.sp_toolTable thead th:last-child {
+    border-radius: 0px 15px 15px 0;
+    padding-right: 30px;
+}
+.sp_toolTable tbody tr td:first-child {
+    padding-left: 25px;
+}
+.sp_toolTable tbody tr:nth-child(even) {
+    box-shadow: 0px 0px 0px 1px #80D8B4;
+    border-radius: 15px;
+  background: #E9F8F2;
+
+}
+.sp_toolTable tbody tr:nth-child(even) td:first-child {
+border-radius: 15px 0px 0px 15px;
+}
+.sp_toolTable tbody tr:nth-child(even) td:last-child {
+border-radius: 0px 15px 15px 0px;
+
+}
+.fe_table_text_arrow {
+    margin-right: 10px;
+    display: inline-flex;
+}
+.sp_toolTable .brand-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+}
+
+.sp_toolTable .brand-header img {
+  width: 70px;
+}
+
+.sp_toolTable .brand-header span {
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+}
+.sp_tool_table_right {
+    background: linear-gradient(6.92deg, #06B873 -27.25%, #00D482 103.07%);
+    box-shadow: 0px 0px 60px 0px #3B329833;
+    border-radius: 30px;
+    width: 285px;
+    text-align: center;
+    padding: 0px 10px 40px;
+position: absolute;
+    right: -65px;
+    top: -27px;
+    bottom: -30px;
+border: 3px solid #FFFFFF;
+    padding-top: 122px;
+}
+.sp_tool_table_right .sp_tool_table_right_icon:not(:last-child){
+margin-bottom: 4px;
+}
+.sp_tool_table_right .sp_tool_table_right_icon{
+    border-radius: 15px;
+    padding: 0px 2px;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+}
+.sp_tool_table_right .sp_tool_table_right_icon:nth-child(odd){
+    border: 1px solid #E3DBF333;
+    background: #FFFFFF1A;
+}
+.sp_tool_table_right_img {
+    position: absolute;
+    top: -38px;
+
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+@media (max-width: 1499px) {
+.sp_tool_table_wrap {
+    width: calc(100% - 258px);
+
+}
+.sp_tool_table_right {
+    right: 0;
+}
+}
+@media (max-width: 1320px) {
+.sp_tool_table_Main_wrap {
+    margin: 0 20px;
+}
+.sp_tool_table_right_img {
+    top: -22px;
+}
+.sp_tool_table_right {
+    width: 250px;
+}
+.sp_tool_table_wrap {
+    width: calc(100% - 225px);
+}
+}
+@media (max-width: 1199px) {
+.sp_toolTable td, .sp_toolTable thead th {
+    font-size: 17px;
+    padding: 20px 5px;
+}
+.sp_toolTable tbody tr td:first-child {
+    padding-left: 15px;
+}
+.sp_toolTable thead th:first-child {
+    padding-left: 15px;
+}
+.sp_tool_table_right_icon img {
+    width: 22px;
+}
+.sp_tool_table_right .sp_tool_table_right_icon {
+    min-height: 70px;
+}
+.sp_tool_table_right_img {
+    top: -19px;
+    max-width: 210px;
+}
+.sp_tool_table_right_img > img{
+    border-radius: 0 0 10px 10px!important;
+}
+.sp_tool_table_right {
+    padding-top: 94px;
+}
+.sp_tool_table_right .sp_tool_table_right_icon:not(:last-child) {
+    margin-bottom: 0;
+}
+}
+
+@media (max-width: 991px) {
+    .sp_tool_table_right {
+        width: 80px;
+        padding: 94px 10px 5px;
+        right: -0;
+}
+    .sp_tool_table_wrap {
+        width: calc(100% - 43px);
+    }
+    .sp_toolTable td, .sp_toolTable thead th {
+        font-size: 16px;
+    }
+    .sp_tool_table_right {
+    border-radius: 10px;
+    }
+    .sp_tool_table_right_img > img {
+        border-radius: 0 !important;
+    }
+}
+@media (max-width: 768px) {
+
+         .sp_tool_table_Main_wrap {
+        margin: auto;
+        width: 100%;
+        max-width: 550px;
+    }
+        .sp_tool_table_wrap {
+        width: calc(100% - 42px);
+        overflow: auto;
+    }
+        .sp_toolTable {
+        width: 654px;
+    }
+        .sp_tool_table_right {
+        right: 0;
+    }
+
+}
+@media(max-width:576px) {
+        .sp_tool_table_Main_wrap {
+        margin: auto;
+        width: 100%;
+        max-width: 450px;
+    }
+        .sp_tool_table_wrap {
+        width: calc(100% - 42px);
+        overflow: auto;
+    }
+        .sp_toolTable {
+        width: 520px;
+    }
+        .sp_tool_table_right {
+        right: 0;
+    }
+    .sp_bonus_coupon_wrap {
+        position: static;
+        margin-bottom: 13px;
+    }
+    .sp_bonus_coupon_i_wrap h2 {
+        padding: 16px 20px;
+    }
+    .sp_exxclusive_launch_box_logo_top_wrap {
+        display: inherit;
+        padding-top: 20px;
+    }
+        .sp_exxclusive_launch_box_top_btn {
+        padding: 3px;
+        border-radius: 50px;
+        width: max-content;
+        margin: 20px auto 5px;
+    }
+    .sp_tool_table_right .sp_tool_table_right_icon {
+        min-height: 50px;
+    }
+    .sp_tool_table_right_img {
+        width: 100px;
+        left: -24px;
+        top: 30px;
+    }
+    .sp_toolTable td, .sp_toolTable thead th {
+        font-size: 12px;
+        padding: 10px 5px;
+    }
+    .fe_table_text_arrow {
+        margin-right: 3px;
+    }
+    .fe_table_text_arrow {
+        vertical-align: text-top;
+    }
+    .sp_tool_table_right {
+        padding: 67px 6px 5px;
+        right: -0;
+    }
+}
+@media(max-width:480px) {
+    .sp_tool_table_Main_wrap {
+        margin: 0 10px;
+    }
+    .sp_toolTable td, .sp_toolTable thead th {
+        font-size: 12px;
+    }
+    .sp_tool_table_right {
+        right: 16px;
+    }
+}
+/* pricing table start */
