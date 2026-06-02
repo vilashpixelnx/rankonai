@@ -54,8 +54,11 @@ background: linear-gradient(180deg, #FFD01B 0%, #FFA301 100%);
 .dark-bg{
     background: var(--darkBg);
 }
+.dark-bg2{
+    background: #20160E;
+}
 .dark-bg3{
-    background: var(--darkColor3);
+    background: #1C120A;
 }
 .blue-color2-bg{
     background:var(--blue-color2);
