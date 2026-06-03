@@ -1,6 +1,8 @@
 :root {
  --darkColor: #222222;
  --primary-color: #FEA703;
+--yellow-color: #FF8000;
+--yellow-color2: #FFFF00;
 --white-color: #ffffff;
 --transition: all 0.3s;
 --fontHanken: "Hanken Grotesk", sans-serif;
@@ -16,7 +18,7 @@
     --blue-color2: #008CFF;
     --red-color: #FF4043;
     --light-green-color: #e4fff59e;
-    --yellow-color: #FFA300;
+
     --purple-color: #9900FF;
     --purple-color2: #8E8AFE;
     --cyan-color: #28EDFB;

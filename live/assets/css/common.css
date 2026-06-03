@@ -60,6 +60,9 @@ background: linear-gradient(180deg, #FFD01B 0%, #FFA301 100%);
 .dark-bg3{
     background: #1C120A;
 }
+.dark-bg4{
+    background: #120C07;
+}
 .blue-color2-bg{
     background:var(--blue-color2);
 }
@@ -79,6 +82,12 @@ background: linear-gradient(180deg, #FFD01B 0%, #FFA301 100%);
     background:var(--pink-color);
 }
 /*Color*/
+.yellow-color{
+    color:var(--yellow-color);
+}
+.yellow-color2{
+    color:var(--yellow-color2);
+}
 .dark-color{
     color: var(--darkColor);
 }
