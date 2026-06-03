@@ -1,5 +1,7 @@
 # Development Guidelines
 
+> For the project overview, folder structure, utility-class reference, section map, and known issues, see [README.md](README.md). This file covers **how to edit** the page; the README covers **what it is and how it is organized**.
+
 ## Page Understanding
 
 - Before designing or editing any section, thoroughly understand `live/index.html` first.

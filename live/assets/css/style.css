@@ -878,6 +878,85 @@ button {
 }
 
 
+/* big-deal robot section START */
+
+
+.fe_bigDeal_robot_card {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  max-width: 795px;
+  margin: 80px auto 0;
+  padding: 0 35px 0 25px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #693006 0%, #1F140D 100%);
+}
+
+.fe_bigDeal_robot_img {
+  flex-shrink: 0;
+  width: 175px;
+  align-self: flex-end;
+  margin-top: -55px;
+}
+
+.fe_bigDeal_robot_img img {
+  display: block;
+  width: 100%;
+}
+
+.fe_bigDeal_robot_text {
+  flex: 1;
+  padding: 26px 0;
+}
+
+.fe_bigDeal_robot_text p {
+  margin: 0;
+}
+
+/* 7 pillars row */
+.fe_pillars_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fe_pillar_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.fe_pillar_icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #693006 0%, #1F140D 100%);
+}
+
+.fe_pillar_icon img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.fe_pillar_label {
+  margin: 0;
+}
+
+.fe_pillar_highlight {
+  color: #FFD01B;
+}
+
+/* big-deal section END */
 
 /* Media Queries start---- */
 @media (min-width: 1025px) {
@@ -1144,6 +1223,24 @@ button {
   .card {
     max-width: 320px;
     margin: 0 10px;
+  }
+
+  .fe_bigDeal_robot_card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+    padding: 0 0 26px;
+  }
+
+  .fe_bigDeal_robot_img {
+    align-self: center;
+    width: 130px;
+    margin-top: -40px;
+  }
+
+  .fe_bigDeal_robot_text {
+    padding: 0 22px;
   }
     .big_idea_inner_left,
   .big_idea_inner_right {
