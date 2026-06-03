@@ -33,6 +33,8 @@ background: linear-gradient(180deg, #FFD01B 0%, #FFA301 100%);
 
 
 
+
+
 .green-gradient{
     background:linear-gradient(180deg, #72CA00 0%, #508E00 100%);
 }
@@ -82,6 +84,9 @@ background: linear-gradient(180deg, #FFD01B 0%, #FFA301 100%);
     background:var(--pink-color);
 }
 /*Color*/
+.pink-color{
+    color:var(--pink-color);
+}
 .yellow-color{
     color:var(--yellow-color);
 }

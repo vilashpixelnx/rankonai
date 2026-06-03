@@ -8,6 +8,7 @@
 --fontHanken: "Hanken Grotesk", sans-serif;
 --darkBg:#120C07;
 --text-color: #757575;
+--pink-color: #FF1D7F;
 
     --darkColor2: #20160E;
     --darkColor3: #1C120A;
@@ -22,7 +23,6 @@
     --purple-color: #9900FF;
     --purple-color2: #8E8AFE;
     --cyan-color: #28EDFB;
-    --pink-color: #FF7D93;
 
 }
 body {
@@ -1024,6 +1024,159 @@ button {
 }
 /* how-work section END */
 
+/* everything-get roadmap section START */
+.fe_everythingGet_section .container-fluid {
+  max-width: 1800px;
+}
+
+.fe_roadmap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+/* dashed connecting line behind the number pills */
+.fe_roadmap::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 2px;
+  z-index: 0;
+  background-image:
+    repeating-linear-gradient(to right, #BA916F 0 8px, transparent 8px 18px),
+    linear-gradient(to right, transparent 0%, #FFC062 45%, #FF7E11 50%, #FFC062 55%, transparent 100%);
+  background-size: 18px 2px, 180px 2px;
+  background-repeat: repeat-x, no-repeat;
+  background-position: 0 50%, -180px 50%;
+  animation: fe_roadmap_flow 2.6s linear infinite;
+}
+
+/* flowing light travelling along the line (and a gentle dash drift) */
+@keyframes fe_roadmap_flow {
+  0%   { background-position: 0 50%,     -180px 50%; }
+  100% { background-position: 18px 50%,  calc(100% + 180px) 50%; }
+}
+
+/* forward-pulsing chevron wave */
+@keyframes fe_roadmap_chevron {
+  0%, 100% { transform: translate(-50%, -50%) translateX(-3px) scale(0.9);  opacity: 1; }
+  50%      { transform: translate(-50%, -50%) translateX(3px)  scale(1.1);  opacity: 1; }
+}
+
+/* vertical variant for the stacked (mobile) layout */
+@keyframes fe_roadmap_chevron_v {
+  0%, 100% { transform: translate(-50%, -50%) rotate(90deg) translateX(-3px) scale(0.9); opacity: 1; }
+  50%      { transform: translate(-50%, -50%) rotate(90deg) translateX(3px)  scale(1.1); opacity: 1; }
+}
+
+.fe_roadmap_step {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+/* chevron sitting on the line, at the midpoint between two numbers */
+.fe_roadmap_step:not(:first-child)::before {
+  content: "\00BB";
+  position: absolute;
+  left: 0;
+  top: 30px;
+  transform: translate(-50%, -50%);
+  color: #FF7E11;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 1;
+  background: #120C07;
+  padding: 0 10px;
+  z-index: 2;
+  text-shadow: 0 0 12px rgba(255, 126, 17, 0.55);
+  animation: fe_roadmap_chevron 1.6s ease-in-out infinite;
+}
+
+/* stagger the chevrons so the pulse flows forward */
+.fe_roadmap_step:nth-child(2)::before { animation-delay: 0s; }
+.fe_roadmap_step:nth-child(3)::before { animation-delay: 0.2s; }
+.fe_roadmap_step:nth-child(4)::before { animation-delay: 0.4s; }
+
+.fe_roadmap_num {
+  width: 93px;
+  height: 60px;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.fe_roadmap_label {
+  width: fit-content;
+  border-radius: 60px;
+  padding: 16px 28px;
+  text-align: center;
+}
+
+/* everything-get roadmap section END */
+
+/* everything-get detail section START */
+
+/* step label straddles the top edge of the box */
+.fe_everyDetail_label {
+  position: relative;
+  z-index: 2;
+  width: fit-content;
+  max-width: 92%;
+  margin: 0 auto;
+  border-radius: 60px;
+  padding: 9px 20px;
+}
+
+.fe_everyDetail_box {
+  position: relative;
+  z-index: 1;
+  background: #120C07;
+  border-radius: 60px;
+  padding: 90px 9% 70px;
+  margin-top: -34px;
+}
+
+.fe_feature_row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.fe_feature_row_reverse {
+  flex-direction: row-reverse;
+}
+
+.fe_feature_content {
+  flex: 1;
+  min-width: 0;
+}
+
+.fe_feature_media {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fe_feature_icon {
+  margin-bottom: 22px;
+}
+
+
+/* everything-get detail section END */
+
 /* Media Queries start---- */
 @media (min-width: 1025px) {
   .home_template_wrapper {
@@ -1153,6 +1306,45 @@ button {
 
   .fe_step_capsule {
     margin: 0 auto;
+  }
+
+  .fe_roadmap {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .fe_roadmap::before {
+    display: none;
+  }
+
+  .fe_roadmap_step {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .fe_roadmap_step:not(:first-child)::before {
+    left: 50%;
+    top: -18px;
+    transform: translate(-50%, -50%) rotate(90deg);
+    animation-name: fe_roadmap_chevron_v;
+  }
+
+  .fe_everyDetail_box {
+    padding: 72px 28px 40px;
+    border-radius: 38px;
+  }
+
+  .fe_feature_row,
+  .fe_feature_row_reverse {
+    flex-direction: column-reverse;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .fe_feature_icon {
+    display: flex;
+    justify-content: center;
   }
 
   .grid-2-cols {
@@ -1312,6 +1504,15 @@ button {
     padding: 28px 22px;
   }
 
+  .fe_everyDetail_box {
+    padding: 60px 18px 30px;
+    border-radius: 28px;
+  }
+
+  .fe_everyDetail_label {
+    padding: 12px 24px;
+  }
+
   .fe_bigDeal_robot_card {
     flex-direction: column;
     align-items: center;
@@ -1420,6 +1621,13 @@ button {
 
   .fe_stat_card {
     padding: 24px 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fe_roadmap::before,
+  .fe_roadmap_step:not(:first-child)::before {
+    animation: none;
   }
 }
 
