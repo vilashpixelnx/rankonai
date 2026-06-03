@@ -958,6 +958,72 @@ button {
 
 /* big-deal section END */
 
+/* how-work section START */
+.fe_howWork_section .container-fluid {
+  max-width: 1330px;
+}
+
+.fe_howWork_steps {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.fe_step_box {
+  position: relative;
+  background: #191009;
+  border-radius: 60px;
+  overflow: hidden;
+  padding: 50px 60px;
+}
+
+.fe_step_glow {
+    position: absolute;
+    top: -95px;
+    left: -55px;
+    width: 274px;
+    height: 274px;
+    border-radius: 50%;
+    background: #fe7e11;
+    filter: blur(170px);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.fe_step_inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.fe_step_box_reverse .fe_step_inner {
+  flex-direction: row-reverse;
+}
+
+.fe_step_content {
+  flex: 1;
+  min-width: 0;
+}
+
+.fe_step_media {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fe_step_capsule {
+  padding: 7px 34px;
+  border-radius: 90px;
+}
+.fe_step_content_heading{
+  padding: 20px 0 10px;
+}
+/* how-work section END */
+
 /* Media Queries start---- */
 @media (min-width: 1025px) {
   .home_template_wrapper {
@@ -1071,6 +1137,22 @@ button {
 @media (max-width: 991px) {
   .el_testimonials_box {
     padding: 30px;
+  }
+
+  .fe_step_box {
+    border-radius: 40px;
+    padding: 36px 30px;
+  }
+
+  .fe_step_inner,
+  .fe_step_box_reverse .fe_step_inner {
+    flex-direction: column-reverse;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .fe_step_capsule {
+    margin: 0 auto;
   }
 
   .grid-2-cols {
@@ -1223,6 +1305,11 @@ button {
   .card {
     max-width: 320px;
     margin: 0 10px;
+  }
+
+  .fe_step_box {
+    border-radius: 28px;
+    padding: 28px 22px;
   }
 
   .fe_bigDeal_robot_card {
