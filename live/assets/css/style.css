@@ -184,6 +184,40 @@ button {
 /* banner section start */
 .fe_banner_wrap{
     background: url(../images/banner/banner_bg.jpg) no-repeat center center/cover;
+    position: relative;
+    isolation: isolate;
+}
+.fe_banner_logo {
+    margin-bottom: 25px;
+}
+.fe_banner_title3{
+  padding: 1px 0 0;
+}
+.fe_banner_para1 {
+    padding: 25px 0 40px;
+}
+/* banner decorative vectors + scroll arrow */
+.fe_banner_left_vector,
+.fe_banner_right_vector {
+    position: absolute;
+    top: 110px;
+    z-index: -1;
+    pointer-events: none;
+}
+.fe_banner_left_vector {
+    left: 3%;
+    animation: fe_banner_float 3s ease-in-out infinite;
+}
+.fe_banner_right_vector {
+    right: 3%;
+    animation: fe_banner_float 3.6s ease-in-out infinite;
+}
+.fe_banner_arrow img {
+    animation: fe_banner_float 1.8s ease-in-out infinite;
+}
+@keyframes fe_banner_float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
 }
 .fe_banner_title1_wrap.common_orange_pills {
     padding: 0.2% 1%;
@@ -252,13 +286,13 @@ button {
   font-weight: 400;
   color: #fff;
   text-transform: capitalize;
-  padding: 0 18px 0 0;
+  padding: 0 32px;
 }
 
 .marquee-star {
   color: #fff;
   font-size: 16px;
-  margin: 0 10px;
+  margin: 0 20px;
 }
 .marquee-star img {
     max-width: unset;
@@ -292,7 +326,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 110px;
   transition: all 0.3s ease;
 }
 
@@ -301,9 +334,6 @@ button {
 }
 
 .home_slide_box img {
-  max-width: 280px;
-  max-height: 110px;
-  object-fit: contain;
   width: 100%;
   transition: all 0.3s ease;
 }
@@ -500,6 +530,23 @@ button {
   100% {
     transform: translateX(0);
   }
+}
+/* static testimonial grid (matches Figma — no marquee animation) */
+.geo_tesmnl_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.geo_tesmnl_grid .card {
+  margin: 0;
+  max-width: none;
+  width: auto;
+}
+@media (max-width: 991px) {
+  .geo_tesmnl_grid { grid-template-columns: repeat(2, 1fr); gap: 22px; }
+}
+@media (max-width: 575px) {
+  .geo_tesmnl_grid { grid-template-columns: 1fr; gap: 18px; }
 }
 /* result section end */
 /* plugin section start  */
@@ -1943,6 +1990,33 @@ button {
 /* With and Without section END */
 
 /* Media Queries start---- */
+@media (max-width: 1799px) {
+  .fe_banner_left_vector, .fe_banner_right_vector {
+    width: 170px;
+}
+}
+@media (min-width: 1200px) and (max-width: 1599px) {
+.fe_newSearch_box_inner {
+    padding: 15px 15px;
+}
+.fe_newSearch_box_icon > img{
+    width: 100px;
+    height: 100px;
+}
+}
+@media (max-width: 1599px) {
+.fe_everyDetail_box {
+    padding: 50px 50px 50px;
+}
+}
+@media (max-width: 1399px) {
+.click_unmute {
+    left: -10%;
+}
+.fe_roadmap {
+    gap: 18px;
+}
+}
 @media (min-width: 1025px) {
   .home_template_wrapper {
     grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -1954,10 +2028,6 @@ button {
     max-width: 280px;
   }
 
-  .home_slide_box img {
-    max-width: 280px;
-    max-height: 110px;
-  }
 
   .fe_stats_wrapper {
     grid-template-columns: repeat(4, 1fr);
@@ -1972,7 +2042,7 @@ button {
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .home_template_wrapper {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 18px;
     padding: 0 16px;
   }
@@ -1982,9 +2052,6 @@ button {
     padding: 0 18px;
   }
 
-  .home_slide_box img {
-    max-height: 100px;
-  }
 
   .fe_stat_card {
     padding: 30px 22px;
@@ -2003,9 +2070,6 @@ button {
     padding: 0 16px;
   }
 
-  .home_slide_box img {
-    max-height: 90px;
-  }
 
   .fe_stat_card {
     padding: 28px 20px;
@@ -2017,9 +2081,7 @@ button {
     max-width: 100%;
   }
 
-  .home_slide_box img {
-    max-width: 100%;
-  }
+
 
   .fe_stats_wrapper {
     grid-template-columns: repeat(2, 1fr);
@@ -2050,11 +2112,38 @@ button {
   }
 }
 @media (max-width: 1199px) {
-
+.fe_video_wrapper {
+    max-width: 75%;
+}
+    .click_unmute {
+        left: -15%;
+    }
+    .fe_banner_left_vector, .fe_banner_right_vector {
+    width: 100px;
+}
 }
 @media (max-width: 991px) {
+  .fe_newSearch_mockup > img {
+    max-width: 540px;
+}
+  .text-center.banner_buy_details {
+    padding-top: 10px;
+}
+      .click_unmute {
+        left: -13%;
+        width: 50px;
+    }
   .el_testimonials_box {
     padding: 30px;
+  }
+
+  .fe_banner_left_vector,
+  .fe_banner_right_vector {
+    display: none;
+  }
+
+  .fe_banner_arrow img {
+    width: 80px;
   }
 
   .fe_step_box {
@@ -2125,14 +2214,14 @@ button {
     flex: 1 0 180px;
   }
 
-  /* pin the RankOnAI card so it stays visible while the box scrolls */
+  /* RankOnAI card scrolls in-flow as the 3rd column (no overlap) */
   .fe_compare_brand {
-    position: sticky;
-    right: 0;
+    position: relative;
+    right: auto;
     top: auto;
     bottom: auto;
     flex: 0 0 300px;
-    align-self: flex-start;
+    align-self: stretch;
     z-index: 3;
   }
 
@@ -2253,6 +2342,17 @@ button {
 }
 }
 @media (max-width: 767px) {
+
+
+
+  .fe_banner_right_vector {
+    right: 1%;
+  }
+
+  .fe_banner_arrow img {
+    width: 50px;
+  }
+
   /* pricing: smaller countdown + tighter cards on phones */
   .fe_timer {
     gap: 8px;
@@ -2332,7 +2432,7 @@ button {
   }
 
   .marquee-item {
-    font-size: 0.82rem;
+    font-size: 16px;
   }
 
   /* compare table — mobile sizing (row heights kept equal so columns stay aligned) */
@@ -2478,6 +2578,9 @@ button {
 }
 }
 @media (max-width: 575px) {
+  .fe-big-btn {
+    padding: 15px 25px;
+}
   .card {
     max-width: 320px;
     margin: 0 10px;
@@ -2536,8 +2639,21 @@ button {
   .big_idea_arrow {
     width: 32px;
   }
+    .fe_banner_logo > img {
+    max-width: 240px;
+}
+
 }
 @media (max-width: 480px) {
+.fe_newSearch_divider {
+    margin: 10px auto 20px;
+}
+      .click_unmute {
+        display: none;
+    }
+        .fe_video_wrapper {
+        max-width: 90%;
+    }
   .geo_tesmnl_slider_parent::before,
   .geo_tesmnl_slider_parent::after {
     background: linear-gradient(90deg, #1e13347a -2%, rgb(30 19 52 / 0%) 82.45%);
@@ -2579,6 +2695,15 @@ button {
   .fe_bonus_badge_row {
     gap: 0;
 }
+.fe_banner_para1 {
+    padding: 20px 0 20px;
+}
+.fe_banner_logo > img {
+    max-width: 180px;
+}
+.marquee-item {
+    padding: 0 0px;
+}
 }
 @media (max-width: 420px) {
       .big_idea_comparison_wrapper {
@@ -2587,7 +2712,7 @@ button {
 }
 @media (max-width: 380px) {
   .marquee-track {
-    animation-play-state: paused;
+    /* animation-play-state: paused; */
   }
 
   .home_template_wrapper {
@@ -2596,9 +2721,6 @@ button {
     padding: 0 10px;
   }
 
-  .home_slide_box img {
-    max-height: 80px;
-  }
 
   .fe_stats_wrapper {
     grid-template-columns: 1fr;
@@ -2772,6 +2894,7 @@ button {
   .fe_ftr_copy {
     font-size: 18px;
   }
+
 }
 
 @media (max-width: 767px) {
@@ -2815,3 +2938,8 @@ button {
 /* ===================== END SITE FOOTER ===================== */
 
 
+
+
+a.btn-forge.btn-forge-continue {
+    display: none;
+}
