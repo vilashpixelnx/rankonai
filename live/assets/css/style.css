@@ -1813,6 +1813,135 @@ button {
 
 /* money-back section END */
 
+/* faq accordion section START */
+.fe_faq_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  max-width: 1540px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: start;
+}
+
+.fe_faq_col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.fe_faq_item {
+  border: 1px solid transparent;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #19100A;
+  background-image: linear-gradient(#19100A, #19100A), linear-gradient(108.72deg, #382517 6.78%, #5E2F0B 96.42%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* active state */
+.fe_faq_item.fe_faq_open {
+  background-image: none;
+  background: #19100A;
+  border-color: #FFD01B;
+}
+
+.fe_faq_q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 70px;
+  padding: 16px 24px;
+  background: transparent;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.fe_faq_q_text {
+  flex: 1;
+}
+
+.fe_faq_arrow {
+  flex-shrink: 0;
+  display: inline-flex;
+  color: #9A8F86;
+  transition: transform 0.35s ease;
+}
+
+.fe_faq_arrow svg {
+  width: 14px;
+  height: 8px;
+  display: block;
+}
+
+.fe_faq_open .fe_faq_arrow {
+  transform: rotate(180deg);
+  color: #FFD01B;
+}
+
+/* collapsible body */
+.fe_faq_a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.fe_faq_p {
+  padding: 0 24px 22px;
+  margin: 0;
+}
+
+/* faq accordion section END */
+
+/* final CTA section START */
+.fe_finalCta_section .container-fluid {
+  max-width: 1240px;
+}
+
+.fe_finalCta_box {
+  max-width: 1156px;
+  margin: 0 auto;
+  padding: 44px 50px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background: #19100A;
+  background-image: linear-gradient(#19100A, #19100A), linear-gradient(108.72deg, #382517 6.78%, #5E2F0B 96.42%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.fe_finalCta_text {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.fe_finalCta_offers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 50px;
+  max-width: 950px;
+  margin: 34px auto 6px;
+}
+
+.fe_finalCta_offer .fe-big-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 16px 24px;
+}
+
+/* final CTA section END */
+
+/* With and Without section start */
+.fe_withWithout_section .container-fluid {
+  max-width: 1565px;
+}
+/* With and Without section END */
+
 /* Media Queries start---- */
 @media (min-width: 1025px) {
   .home_template_wrapper {
@@ -2033,6 +2162,13 @@ button {
     margin-right: auto;
   }
 
+  /* faq: single column */
+  .fe_faq_grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 760px;
+  }
+
   /* bonuses: stack with image on top */
   .fe_bonus_item {
     padding: 30px 26px;
@@ -2145,6 +2281,15 @@ button {
   .fe_mback_box {
     margin-top: 60px;
     padding: 64px 20px 28px;
+  }
+
+  .fe_finalCta_box {
+    padding: 32px 20px;
+  }
+
+  .fe_finalCta_offers {
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 
   .fe_mback_list {
