@@ -170,6 +170,23 @@ button {
     max-width: 1102px;
 }
 /* re usable css start  */
+/* shared section vertical spacing */
+.fe-section-spacing-80-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.fe-section-spacing-80-70 {
+    padding-top: 80px;
+    padding-bottom: 70px;
+}
+.fe-section-spacing-70-80 {
+    padding-top: 70px;
+    padding-bottom: 80px;
+}
+.fe-section-spacing-70-70 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
 .common_orange_pills{
     border-radius: 90px;
 }
@@ -298,7 +315,9 @@ button {
     max-width: unset;
 }
 /* marquee section end */
-
+.fe_ai_engine_section {
+  padding: 80px 0 50px;
+}
 .fe_ai_engine_section .container-fluid {
     max-width: 1800px;
 }
@@ -550,6 +569,22 @@ button {
 }
 @media (max-width: 575px) {
   .geo_tesmnl_grid { grid-template-columns: 1fr; gap: 18px; }
+}
+.fe-section-spacing-80-80 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.fe-section-spacing-80-70 {
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+.fe-section-spacing-70-80 {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+.fe-section-spacing-70-70 {
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 /* result section end */
 /* plugin section start  */

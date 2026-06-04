@@ -1,6 +1,7 @@
 .fontHanken{
     font-family: var(--fontHanken);
 }
+
 .primaryLink, .primaryLink:hover{
     color: var(--primary-color);
 }
