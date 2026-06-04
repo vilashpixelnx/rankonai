@@ -1346,18 +1346,15 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 46px;
-  height: 46px;
-  border-radius: 13px;
-  color: var(--accent);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  box-shadow: 0 0 22px -6px var(--glow);
+  width: 40px;
+  height: auto;
+  position: absolute;
 }
 
-.fe_audience_badge svg {
-  width: 22px;
-  height: 22px;
+.fe_audience_badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .fe_audience_art {
@@ -1365,7 +1362,7 @@ button {
   align-items: center;
   justify-content: center;
   min-height: 168px;
-  margin: 6px 0 20px;
+  margin: 12px 0 20px;
 }
 
 .fe_audience_art img {
@@ -1401,21 +1398,26 @@ button {
   height: 46px;
   border-radius: 50%;
   color: var(--accent);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: transparent;
+  /* fallback for browsers without color-mix */
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  background: rgba(255, 255, 255, 0.04);
+  background: linear-gradient(150deg, color-mix(in srgb, var(--accent) 18%, transparent) 0%, color-mix(in srgb, var(--accent) 5%, transparent) 100%);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 16px -5px var(--glow), inset 0 1px 1px rgba(255, 255, 255, 0.12);
   transition: all 0.3s ease;
 }
 
 .fe_audience_btn svg {
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
 }
 
 .fe_audience_btn:hover {
-  color: #ffffff;
   border-color: var(--accent);
-  background: var(--accent);
-  box-shadow: 0 0 26px -2px var(--glow);
+  background: linear-gradient(150deg, color-mix(in srgb, var(--accent) 30%, transparent) 0%, color-mix(in srgb, var(--accent) 10%, transparent) 100%);
+  box-shadow: 0 0 26px -3px var(--glow), inset 0 1px 1px rgba(255, 255, 255, 0.18);
 }
 
 /* audience (who it's for) section END */
@@ -1731,20 +1733,15 @@ button {
 }
 }
 @media (max-width: 767px) {
-  /* mobile: horizontal snap-scroll cards instead of stacking */
+  /* mobile: single-column stack (no horizontal scroll) */
   .fe_audience_grid {
-    display: flex;
-    grid-template-columns: none;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 10px;
+    overflow-x: visible;
   }
 
   .fe_audience_card {
-    flex: 0 0 300px;
-    scroll-snap-align: start;
     min-height: auto;
   }
 
