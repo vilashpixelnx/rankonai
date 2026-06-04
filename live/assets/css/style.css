@@ -1459,6 +1459,301 @@ button {
 
 /* income (new income stream) section END */
 
+/* free bonuses section START */
+.fe_free-bonuses_section .container-fluid {
+  max-width: 1300px;
+}
+
+.fe_bonus_list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.fe_bonus_item {
+  position: relative;
+  overflow: hidden;
+  background: #191009;
+  border-radius: 60px;
+  padding: 34px 60px;
+}
+
+/* warm orange glow behind the badge / box */
+.fe_bonus_glow {
+  position: absolute;
+  top: -90px;
+  left: -40px;
+  width: 274px;
+  height: 274px;
+  border-radius: 50%;
+  background: #FE7E11;
+  filter: blur(130px);
+  opacity: 0.45;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.fe_bonus_item:nth-child(even) .fe_bonus_glow {
+  left: auto;
+  right: -40px;
+}
+
+.fe_bonus_inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.fe_bonus_item:nth-child(even) .fe_bonus_inner {
+  flex-direction: row-reverse;
+}
+
+.fe_bonus_media {
+  flex: 0 0 36%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fe_bonus_content {
+  flex: 1;
+  min-width: 0;
+}
+
+.fe_bonus_badge_row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.fe_bonus_badge {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 92px;
+  height: 92px;
+  background: url(../images/bonus/icon-bg.png) no-repeat center center / contain;
+  position: relative;
+}
+.fe_bonus_badge > span {
+    position: absolute;
+    bottom: 17px;
+    font-size: 26px;
+}
+.fe_bonus_sub_heading {
+    margin-top: 21px;
+}
+/* free bonuses section END */
+
+/* launch offer (pricing) section START */
+.fe_launch_offer_section .container-fluid {
+  max-width: 1380px;
+}
+
+/* countdown */
+.fe_timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.fe_timer_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 90px;
+  border: 1px solid #FFD01B;
+  border-radius: 10px;
+  /* dark base with a faint yellow centre sheen */
+  background: linear-gradient(90deg, rgba(24, 16, 10, 0.1) 0%, rgba(255, 208, 27, 0.1) 49.11%, rgba(24, 16, 10, 0.1) 100.15%), #19100A;
+  font-size: 50px;
+  line-height: 70px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.fe_timer_sep {
+  font-size: 40px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+/* pricing grid */
+.fe_pricing_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.fe_price_card {
+  position: relative;
+  border-radius: 60px;
+}
+
+.fe_price_card_left {
+  background: #19100A;
+  border: 1px solid #FFD01B;
+  box-shadow: 0 0 60px 30px #FFD01B1A;
+}
+
+.fe_price_card_right {
+  background: linear-gradient(180deg, #FFA11D 0%, #FF4D00 121.87%);
+  box-shadow: 0 0 80px 0 #FFA30199;
+}
+
+.fe_price_badge {
+  position: absolute;
+  top: -49px;
+  right: 10%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 193px;
+  height: 49px;
+  padding: 14px 24px;
+  border-radius: 30px 30px 0 0;
+  background: #FFFFFF;
+  color: #FF5D06;
+  white-space: nowrap;
+}
+
+.fe_price_head {
+  padding: 50px 40px 40px;
+}
+.fe_price_head {
+    background: linear-gradient(90deg, rgb(24 16 10 / 10%) 0%, rgb(255 208 27 / 10%) 49.11%, rgb(24 16 10 / 10%) 100.15%);
+}
+.fe_price_pill {
+  border-radius: 90px;
+  padding: 2px 22px;
+  margin-bottom: 16px;
+}
+
+.fe_price_pill_white {
+  border-radius: 90px;
+  padding: 2px 22px;
+  margin-bottom: 16px;
+  background: #FFFFFF;
+  color: #FF5D06;
+}
+
+.fe_price_amount {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+.fe_price_old {
+  text-decoration: line-through;
+}
+
+.fe_price_card_right .fe_price_old {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* divider between header and body */
+.fe_price_divider {
+  display: block;
+  height: 1px;
+  background: linear-gradient(90deg, #18100A 0%, #FFD01B 49.11%, #18100A 100.15%);
+}
+
+.fe_price_card_right .fe_price_divider {
+  background: linear-gradient(90deg, #FF9218 0%, #FFFFFF 49.11%, #FF9017 100.15%);
+}
+
+.fe_price_body {
+  padding: 50px 40px 50px;
+}
+
+.fe_price_list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fe_price_item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.4;
+}
+
+.fe_price_item img {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* CTA inside cards */
+.fe_price_cta .fe-big-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 18px 30px;
+}
+
+/* coupon */
+.fe_coupon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.fe_coupon_code {
+    padding: 8px 18px;
+    border: 1px dashed #FFD01B;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    background: #1C1209;
+}
+
+/* launch offer (pricing) section END */
+
+/* heads-up section START */
+.fe_headsUp_box {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 64px 40px;
+  border-radius: 36px;
+  overflow: hidden;
+  background: url(../images/heads-up/bg.png) no-repeat;
+      background-size: 100% 100%;
+}
+.fe_headsUp_inner {
+    padding: 0 20px;
+}
+
+
+.fe_headsUp_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 127px;
+  height: 127px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #693006 0%, #1F140D 100%);
+}
+
+.fe_headsUp_icon img {
+  width: 62px;
+  height: auto;
+}
+
+/* heads-up section END */
+
 /* Media Queries start---- */
 @media (min-width: 1025px) {
   .home_template_wrapper {
@@ -1670,6 +1965,36 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* pricing: stack cards */
+  .fe_pricing_grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* bonuses: stack with image on top */
+  .fe_bonus_item {
+    padding: 30px 26px;
+    border-radius: 36px;
+  }
+
+  .fe_bonus_inner,
+  .fe_bonus_item:nth-child(even) .fe_bonus_inner {
+    flex-direction: column;
+    gap: 26px;
+    text-align: center;
+  }
+
+  .fe_bonus_media {
+    flex: 0 0 auto;
+  }
+
+  .fe_bonus_badge_row {
+    justify-content: center;
+  }
+
   .grid-2-cols {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -1733,6 +2058,44 @@ button {
 }
 }
 @media (max-width: 767px) {
+  /* pricing: smaller countdown + tighter cards on phones */
+  .fe_timer {
+    gap: 8px;
+  }
+
+  .fe_timer_box {
+    width: 58px;
+    height: 66px;
+    font-size: 34px;
+    line-height: 1;
+  }
+
+  .fe_timer_sep {
+    font-size: 28px;
+  }
+
+  .fe_price_head {
+    padding: 28px 26px 22px;
+  }
+
+  .fe_headsUp_box {
+    padding: 40px 22px;
+    border-radius: 26px;
+  }
+
+  .fe_headsUp_icon {
+    width: 96px;
+    height: 96px;
+  }
+
+  .fe_headsUp_icon img {
+    width: 48px;
+  }
+
+  .fe_price_body {
+    padding: 26px 26px 32px;
+  }
+
   /* mobile: single-column stack (no horizontal scroll) */
   .fe_audience_grid {
     display: grid;
@@ -1886,6 +2249,14 @@ button {
     height: 90px;
     font-size: 36px;
   }
+  .fe_bonus_badge {
+    width: 82px;
+    height: 82px;
+}
+.fe_bonus_badge > span {
+    bottom: 16px;
+    font-size: 22px;
+}
 }
 @media (max-width: 575px) {
   .card {
@@ -1986,6 +2357,9 @@ button {
   .card-left-accent {
     padding-left: 16px;
   }
+  .fe_bonus_badge_row {
+    gap: 0;
+}
 }
 @media (max-width: 420px) {
       .big_idea_comparison_wrapper {
