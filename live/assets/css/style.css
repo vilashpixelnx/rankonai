@@ -1781,7 +1781,7 @@ button {
   padding: 64px 40px;
   border-radius: 36px;
   overflow: hidden;
-  background: url(../images/heads-up/bg.png) no-repeat;
+  background: url(../images/heads-up/bg.webp) no-repeat;
       background-size: 100% 100%;
 }
 .fe_headsUp_inner {
