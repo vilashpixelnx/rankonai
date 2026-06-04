@@ -1061,16 +1061,16 @@ button {
   100% { background-position: 18px 50%,  calc(100% + 180px) 50%; }
 }
 
-/* forward-pulsing chevron wave */
+/* chevron horizontal motion */
 @keyframes fe_roadmap_chevron {
-  0%, 100% { transform: translate(-50%, -50%) translateX(-3px) scale(0.9);  opacity: 1; }
-  50%      { transform: translate(-50%, -50%) translateX(3px)  scale(1.1);  opacity: 1; }
+  0%, 100% { transform: translate(-50%, -50%) translateX(-4px); }
+  50%      { transform: translate(-50%, -50%) translateX(4px); }
 }
 
 /* vertical variant for the stacked (mobile) layout */
 @keyframes fe_roadmap_chevron_v {
-  0%, 100% { transform: translate(-50%, -50%) rotate(90deg) translateX(-3px) scale(0.9); opacity: 1; }
-  50%      { transform: translate(-50%, -50%) rotate(90deg) translateX(3px)  scale(1.1); opacity: 1; }
+  0%, 100% { transform: translate(-50%, -50%) rotate(90deg) translateX(-4px); }
+  50%      { transform: translate(-50%, -50%) rotate(90deg) translateX(4px); }
 }
 
 .fe_roadmap_step {
@@ -1095,10 +1095,8 @@ button {
   font-weight: 900;
   font-size: 30px;
   line-height: 1;
-  background: #120C07;
   padding: 0 10px;
   z-index: 2;
-  text-shadow: 0 0 12px rgba(255, 126, 17, 0.55);
   animation: fe_roadmap_chevron 1.6s ease-in-out infinite;
 }
 
@@ -1176,6 +1174,122 @@ button {
 
 
 /* everything-get detail section END */
+
+/* compare table section START */
+.fe_compare {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* main dark box with gradient border (left + center columns) */
+.fe_compare_box {
+  display: flex;
+  gap: 30px;
+  padding: 26px 60px 40px;
+  padding-right: 350px;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  background: #19100A;
+  background-image: linear-gradient(#19100A, #19100A), linear-gradient(104.09deg, #382517 7.26%, #5E2F0B 103.2%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.fe_compare_left {
+  flex: 1.25;
+  min-width: 0;
+}
+
+.fe_compare_center {
+  flex: 1;
+  min-width: 0;
+}
+
+.fe_compare_head {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 70px;
+  color: #FFFFFF;
+}
+
+.fe_compare_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fe_compare_item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 57px;
+  color: #FFFFFF;
+}
+
+.fe_compare_arrow {
+  flex-shrink: 0;
+  width: 22px;
+  height: 16px;
+  background: url(../images/table/arrow.png) no-repeat center center / contain;
+}
+
+.fe_compare_center .fe_compare_item {
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  color: #FF3F42;
+}
+
+/* floating RankOnAI gradient card (right column) */
+.fe_compare_brand {
+  position: absolute;
+  top: -28px;
+  bottom: -28px;
+  right: 0;
+  width: 312px;
+  z-index: 2;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 30px;
+  background: linear-gradient(10.13deg, #FFD32A -34.52%, #FFA954 3.71%, #FF5DA0 78.69%, #FF40BF 112.51%);
+  box-shadow: 0 24px 60px rgba(255, 77, 128, 0.35);
+}
+
+.fe_compare_brand_head {
+  padding: 22px 20px;
+  border-radius: 0 0 20px 20px;
+  background: linear-gradient(180deg, #410521 0%, #1C120A 100%);
+  text-align: center;
+    max-width: 80%;
+    margin: auto;
+}
+
+.fe_compare_brand_list {
+  padding: 0 28px 30px;
+  margin-top: 50px;
+}
+
+.fe_compare_brand_head img {
+  height: 30px;
+  width: auto;
+  display: inline-block;
+}
+
+.fe_compare_brand_list .fe_compare_item {
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.fe_compare_check {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+/* compare table section END */
 
 /* Media Queries start---- */
 @media (min-width: 1025px) {
@@ -1335,6 +1449,42 @@ button {
     border-radius: 38px;
   }
 
+  /* keep the comparison horizontal; scroll left-right instead of stacking */
+  .fe_compare {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+  }
+
+  .fe_compare_box {
+    flex: 1 0 auto;
+    flex-direction: row;
+    gap: 24px;
+    min-width: 600px;
+    padding: 26px 30px 30px;
+    padding-right: 30px;
+  }
+
+  .fe_compare_left {
+    flex: 1 0 300px;
+  }
+
+  .fe_compare_center {
+    flex: 1 0 180px;
+  }
+
+  /* pin the RankOnAI card so it stays visible while the box scrolls */
+  .fe_compare_brand {
+    position: sticky;
+    right: 0;
+    top: auto;
+    bottom: auto;
+    flex: 0 0 300px;
+    align-self: flex-start;
+    z-index: 3;
+  }
+
   .fe_feature_row,
   .fe_feature_row_reverse {
     flex-direction: column-reverse;
@@ -1411,6 +1561,60 @@ button {
 
   .marquee-item {
     font-size: 0.82rem;
+  }
+
+  /* compare table — mobile sizing (row heights kept equal so columns stay aligned) */
+  .fe_compare_box {
+    gap: 18px;
+    min-width: 500px;
+    padding: 20px 22px 24px;
+  }
+
+  .fe_compare_left {
+    flex: 1 0 250px;
+  }
+
+  .fe_compare_center {
+    flex: 1 0 140px;
+  }
+
+  .fe_compare_head {
+    font-size: 17px;
+    line-height: 46px;
+  }
+
+  .fe_compare_item {
+    gap: 9px;
+    font-size: 15px;
+    line-height: 42px;
+  }
+
+  .fe_compare_arrow {
+    width: 18px;
+    height: 13px;
+  }
+
+  .fe_compare_check {
+    width: 18px;
+    height: 18px;
+  }
+
+  .fe_compare_brand {
+    flex: 0 0 250px;
+  }
+
+  .fe_compare_brand_head {
+    padding: 14px 16px;
+  }
+
+  .fe_compare_brand_head img {
+    height: 24px;
+  }
+
+  /* header(52px) + margin(14px) ≈ box padding-top(20px) + head line-height(46px) → rows align */
+  .fe_compare_brand_list {
+    margin-top: 14px;
+    padding: 0 20px 22px;
   }
 
   .fe_newSearch_boxes_container {
