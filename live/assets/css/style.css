@@ -1721,6 +1721,9 @@ button {
 /* launch offer (pricing) section END */
 
 /* heads-up section START */
+.fe_moneyBack_head {
+    padding-bottom: 40px;
+}
 .fe_headsUp_box {
   position: relative;
   max-width: 1240px;
@@ -1753,6 +1756,62 @@ button {
 }
 
 /* heads-up section END */
+
+/* money-back section START */
+.fe_mback_box {
+  position: relative;
+  max-width: 1074px;
+  margin: 110px auto 0;
+  padding: 120px 38px 38px;
+  border-radius: 15px;
+  border: 1px solid transparent;
+  background: #19100A;
+  background-image: linear-gradient(#19100A, #19100A), linear-gradient(108.72deg, #382517 6.78%, #5E2F0B 96.42%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.fe_mback_badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fe_mback_badge img {
+  width: 210px;
+  height: auto;
+}
+
+.fe_mback_text {
+  max-width: 720px;
+  margin: 0 auto 30px;
+}
+
+.fe_mback_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 50px;
+  max-width: 998px;
+  margin: 0 auto;
+  padding: 24px 40px;
+  border-radius: 20px;
+}
+
+.fe_mback_item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1.4;
+}
+
+.fe_mback_item img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* money-back section END */
 
 /* Media Queries start---- */
 @media (min-width: 1025px) {
@@ -2081,6 +2140,21 @@ button {
   .fe_headsUp_box {
     padding: 40px 22px;
     border-radius: 26px;
+  }
+
+  .fe_mback_box {
+    margin-top: 60px;
+    padding: 64px 20px 28px;
+  }
+
+  .fe_mback_list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 22px 24px;
+  }
+
+  .fe_mback_badge img {
+    width: 104px;
   }
 
   .fe_headsUp_icon {
