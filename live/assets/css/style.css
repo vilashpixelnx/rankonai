@@ -1391,7 +1391,6 @@ button {
   margin-top: auto;
   display: flex;
   justify-content: flex-end;
-  padding-top: 22px;
 }
 
 .fe_audience_btn {
@@ -1420,6 +1419,43 @@ button {
 }
 
 /* audience (who it's for) section END */
+
+/* income (new income stream) section START */
+.fe_income_lead {
+  color: #FFA301;
+  font-style: italic;
+}
+
+.fe_income_box {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 26px 30px;
+  border-radius: 15px;
+  border: 1px solid transparent;
+  background: #19100A;
+  background-image: linear-gradient(#19100A, #19100A), linear-gradient(104.09deg, #382517 7.26%, #5E2F0B 103.2%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.fe_income_box_icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #693006 0%, #1F140D 100%);
+}
+
+.fe_income_box_icon img {
+  width: 44px;
+  height: auto;
+}
+
+/* income (new income stream) section END */
 
 /* Media Queries start---- */
 @media (min-width: 1025px) {
@@ -1636,6 +1672,11 @@ button {
     grid-template-columns: 1fr;
     gap: 30px;
     padding: 0 16px;
+  }
+
+  /* income section: show the report image on top when stacked */
+  .fe_income_section .flex-center {
+    order: -1;
   }
 
   .flex-column-gap {
