@@ -854,6 +854,7 @@ button {
     top: 0;
     bottom: 0;
     margin: auto;
+    z-index: 1;
 }
 
 /* Left Box Styling */
@@ -3043,4 +3044,72 @@ button {
 
 a.btn-forge.btn-forge-continue {
     display: none;
+}
+
+/* ============================================================
+   Subtle, professional hover effects for card / grid boxes
+   (stat cards, new-search boxes & audience cards keep their
+   own existing hover states)
+   ============================================================ */
+.card-left-accent,
+.fe_step_box,
+.fe_bonus_item,
+.fe_review_card,
+.fe_pillar_item,
+.fe_price_card,
+.fe_mback_list,
+.big_idea_outer_left,
+.big_idea_outer_right {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    will-change: transform;
+}
+
+/* lift + soft warm shadow on the repeating cards */
+.card-left-accent:hover,
+.fe_step_box:hover,
+.fe_bonus_item:hover,
+.fe_review_card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 42px -20px rgba(255, 161, 29, 0.40);
+}
+
+/* smaller items: gentle lift only */
+.fe_pillar_item:hover {
+    transform: translateY(-5px);
+}
+
+/* large boxes already carry their own glow — lift only, keep their shadow */
+.fe_price_card:hover,
+.big_idea_outer_left:hover,
+.big_idea_outer_right:hover {
+    transform: translateY(-6px);
+}
+
+.fe_mback_list:hover {
+    transform: translateY(-4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card-left-accent,
+    .fe_step_box,
+    .fe_bonus_item,
+    .fe_review_card,
+    .fe_pillar_item,
+    .fe_price_card,
+    .fe_mback_list,
+    .big_idea_outer_left,
+    .big_idea_outer_right {
+        transition: none;
+    }
+    .card-left-accent:hover,
+    .fe_step_box:hover,
+    .fe_bonus_item:hover,
+    .fe_review_card:hover,
+    .fe_pillar_item:hover,
+    .fe_price_card:hover,
+    .fe_mback_list:hover,
+    .big_idea_outer_left:hover,
+    .big_idea_outer_right:hover {
+        transform: none;
+    }
 }
