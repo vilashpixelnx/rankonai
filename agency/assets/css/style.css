@@ -203,6 +203,7 @@ button {
     background: url(../images/banner/banner_bg.jpg) no-repeat center center/cover;
     position: relative;
     isolation: isolate;
+    padding: 44px 0 50px;
 }
 .fe_banner_logo {
     margin-bottom: 25px;
@@ -274,6 +275,154 @@ button {
 .pill-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 26px; margin-top: 26px; }
 .pill-row li { display: flex; align-items: center; gap: 8px;}
 /* .pill-row li img { width: 18px; height: 18px; } */
+/* agency hero (banner) */
+.fe_banner_title {
+    margin: 14px auto 0;
+}
+.fe_banner_sub {
+    max-width: 1230px;
+    margin: 26px auto 0;
+}
+.fe_banner_note {
+    margin: 22px auto 0;
+}
+.fe_hero_suite {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 16px;
+    max-width: 1300px;
+    margin: 42px auto 0;
+}
+.fe_hero_suite span {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 15px 30px;
+    border-radius: 90px;
+    border: 1px solid transparent;
+    font-weight: 700;
+    background-image:
+        linear-gradient(180deg, #343331 0%, #1b1613 100%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(181, 148, 122, 0.28) 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 0 10px 26px -6px rgba(0, 0, 0, 0.5);
+}
+.fe_hero_suite span img {
+    width: 27px;
+    height: 27px;
+    flex-shrink: 0;
+}
+/* opportunity - unfair-advantage callout */
+.fe_opp_advantage {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 22px 20px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background: #19100A;
+    background-image: linear-gradient(#19100A, #19100A), linear-gradient(104.09deg, #382517 7.26%, #5E2F0B 103.2%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+.fe_opp_advantage_icon {
+    flex-shrink: 0;
+    width: 150px;
+}
+.fe_opp_advantage_icon img {
+    width: 100%;
+    display: block;
+}
+.fe_opp_advantage_text {
+    flex: 1;
+}
+.fe_opp_advantage_text p {
+    margin: 0;
+}
+@media (max-width: 767px) {
+    .fe_opp_advantage {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 24px 22px;
+    }
+    .fe_opp_advantage_icon {
+        width: 120px;
+    }
+}
+/* inline price pill inside CTA buttons */
+.price-pill {
+    display: inline-block;
+    margin-left: 12px;
+    padding: 4px 16px;
+    border-radius: 90px;
+    background: #FFFFFF;
+    color: #FF5D06;
+    font-size: 0.62em;
+    line-height: 1.6;
+    white-space: nowrap;
+}
+/* roadmap rail - per-step when/desc helpers */
+.fe_roadmap_when {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.85;
+}
+.fe_roadmap_desc {
+    max-width: 240px;
+    margin: 0 auto;
+    text-emphasis: none;
+}
+/* ROI money box */
+.fe_roi_box {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 60px;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    background: #120C07;
+    background-image: linear-gradient(#120C07, #120C07), linear-gradient(104.09deg, #382517 7.26%, #5E2F0B 103.2%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+@media (max-width: 767px) {
+    .fe_roi_box {
+        padding: 30px 22px;
+        border-radius: 20px;
+    }
+}
+/* agency Everything you need  start  */
+.fe_buildAgency_heading{
+    max-width: 930px;
+    margin: auto auto 70px;
+}
+/* agency end  */
+/* offer - single pricing card */
+.fe_price_single {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.price-lock-foot {
+    max-width: 760px;
+    margin: 28px auto 0;
+}
+/* final CTA - decline link */
+.fe_decline {
+    display: block;
+    max-width: 860px;
+    margin: 26px auto 0;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+.fe_decline:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
 /* banner section end */
 /* marquee section start */
 .marquee-banner {
@@ -1097,18 +1246,27 @@ button {
 /* how-work section END */
 
 /* everything-get roadmap section START */
+
 .fe_everythingGet_section .container-fluid {
   max-width: 1800px;
 }
-
+.fe_buildAgency_section .container-fluid {
+  max-width: 1800px;
+}
 .fe_roadmap {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 50px;
+  max-width: 1300px;
+  margin: 0 auto;
 }
-
+/* fe_whoFor_section start */
+.fe_whoFor_section .container-fluid {
+    max-width: 1700px;
+}
+/* fe_whoFor_section end */
 /* dashed connecting line behind the number pills */
 .fe_roadmap::before {
   content: "";
@@ -1154,6 +1312,7 @@ button {
   flex-direction: column;
   align-items: center;
   gap: 22px;
+  text-align: center;
 }
 
 /* chevron sitting on the line, at the midpoint between two numbers */
@@ -1161,11 +1320,11 @@ button {
   content: "\00BB";
   position: absolute;
   left: 0;
-  top: 30px;
+  top: 25px;
   transform: translate(-50%, -50%);
   color: #FF7E11;
   font-weight: 900;
-  font-size: 30px;
+  font-size: 60px;
   line-height: 1;
   padding: 0 10px;
   z-index: 2;
