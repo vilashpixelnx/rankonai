@@ -316,7 +316,7 @@ button {
 }
 /* marquee section end */
 .fe_ai_engine_section {
-  padding: 80px 0 50px;
+  padding: 70px 0 50px;
 }
 .fe_ai_engine_section .container-fluid {
     max-width: 1800px;
@@ -568,23 +568,9 @@ button {
   .geo_tesmnl_grid { grid-template-columns: repeat(2, 1fr); gap: 22px; }
 }
 @media (max-width: 575px) {
-  .geo_tesmnl_grid { grid-template-columns: 1fr; gap: 18px; }
-}
-.fe-section-spacing-80-80 {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-.fe-section-spacing-80-70 {
-    padding-top: 50px;
-    padding-bottom: 40px;
-}
-.fe-section-spacing-70-80 {
-    padding-top: 40px;
-    padding-bottom: 50px;
-}
-.fe-section-spacing-70-70 {
-    padding-top: 40px;
-    padding-bottom: 40px;
+ .geo_tesmnl_grid {
+     grid-template-columns: 1fr; gap: 18px;
+    }
 }
 /* result section end */
 /* plugin section start  */
@@ -2089,6 +2075,17 @@ button {
   }
 }
 
+@media (min-width: 992px) {
+  .fe_howWork_steps .fe_step_box:first-child .fe_step_media {
+    min-height: 340px;
+}
+.fe_feature_media{
+  justify-content: flex-end;
+}
+.fe_feature_row_reverse .fe_feature_media{
+  justify-content: flex-start;
+}
+}
 @media (min-width: 769px) and (max-width: 1024px) {
   .home_template_wrapper {
     grid-template-columns: repeat(3, 1fr);
@@ -2709,11 +2706,6 @@ button {
   .big_idea_list {
     gap: 12px;
   }
-
-
-
-
-
   .big_idea_vs_element {
     width: 80px;
     height: 80px;
@@ -2729,7 +2721,22 @@ button {
 .fe_income_box {
     flex-direction: column;
 }
-
+.fe-section-spacing-80-80 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.fe-section-spacing-80-70 {
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+.fe-section-spacing-70-80 {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+.fe-section-spacing-70-70 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 }
 @media (max-width: 480px) {
   /* swap to the mobile "without" image */
