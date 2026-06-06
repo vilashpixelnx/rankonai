@@ -1659,9 +1659,12 @@ button {
 /* pricing grid */
 .fe_pricing_grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 36px;
   align-items: start;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .fe_price_card {
