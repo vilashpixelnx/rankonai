@@ -200,18 +200,19 @@ button {
 /* re usable css end  */
 /* banner section start */
 .fe_banner_wrap{
-    background: url(../images/banner/banner_bg.webp) no-repeat center center/cover;
+    background: url(../images/banner/banner_bg.jpg) no-repeat center bottom/cover;
     position: relative;
     isolation: isolate;
+      padding: 40px 0 51px;
 }
 .fe_banner_logo {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 .fe_banner_title3{
   padding: 1px 0 0;
 }
 .fe_banner_para1 {
-    padding: 25px 0 40px;
+    padding: 10px 0 40px;
 }
 /* banner decorative vectors + scroll arrow */
 .fe_banner_left_vector,
@@ -237,7 +238,7 @@ button {
     50% { transform: translateY(10px); }
 }
 .fe_banner_title1_wrap.common_orange_pills {
-    padding: 0.2% 1%;
+    padding: 8px 24px;
     margin: 14px 0 4px;
 }
 .fe_video_wrapper {
@@ -2040,12 +2041,31 @@ button {
     padding: 50px 50px 50px;
 }
 }
+
 @media (max-width: 1399px) {
 .click_unmute {
     left: -10%;
 }
 .fe_roadmap {
     gap: 18px;
+}
+}
+@media (max-width: 1199px) {
+  .fe_banner_wrap {
+    position: relative;
+  }
+  .fe_banner_wrap:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    background: #211307a6;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
 }
 }
 @media (min-width: 1299px) {
@@ -2654,6 +2674,9 @@ button {
 }
 }
 @media (max-width: 575px) {
+      .fe_banner_para1 {
+        padding: 10px 0 15px;
+    }
       .fe_bonus_item {
         padding: 25px 20px;
         border-radius: 20px;
@@ -2741,6 +2764,11 @@ button {
 }
 }
 @media (max-width: 480px) {
+  .fe_banner_title1_wrap.common_orange_pills {
+    padding: 8px 12px;
+    border-radius: 12px;
+  }
+
   /* swap to the mobile "without" image */
   .fe_without_desktop {
     display: none;
@@ -2806,8 +2834,8 @@ button {
   .fe_bonus_badge_row {
     gap: 0;
 }
-.fe_banner_para1 {
-    padding: 20px 0 20px;
+.fe_banner_title2 {
+  padding: 8px 0 0;
 }
 .fe_banner_logo > img {
     max-width: 180px;
