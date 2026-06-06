@@ -190,7 +190,7 @@ button {
     margin: 25px 0 20px;
 }
 .fe_gold_color{
-  background: 
+  background:
 linear-gradient(0deg, #FFD01B, #FFD01B);
 -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1597,70 +1597,89 @@ linear-gradient(0deg, #FFD01B, #FFD01B);
 
 /* PRO: offer card START */
 .fe_pro_offer_wrap {
-  max-width: 820px;
+  max-width: 750px;
   margin: 0 auto;
   position: relative;
   margin-top: 80px;
 }
 .fe-pro-card-price {
-    background: url(../images/smart-cell/pro-bg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 44px 44px 40px;
+    background: linear-gradient(90deg, rgb(24 16 10 / 10%) 0%, rgb(255 208 27 / 10%) 49.11%, rgb(24 16 10 / 10%) 100.15%);
+    padding: 50px 44px 40px;
     border-radius: 60px 60px 0 0 ;
 }
 .fe_pro_offer_tag {
     position: relative;
     z-index: 2;
     background: #ffff;
-    border-radius: 90px 90px 0 0;
-    padding: 10px 26px;
+    border-radius: 30px 30px 0 0;
+    padding: 5px 20px;
     margin-bottom: -22px;
     /* box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.35); */
     position: absolute;
-    right: 136px;
-    top: -3.2%;
+    right: 70px;
+    top: -55px;
     color: #FF5D06;
+    min-width: 294px;
+    height: 55px;
+      display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .fe_pro_offer_card {
-background:
-linear-gradient(180deg, #FFA11D 0%, #FF4D00 121.87%);
-box-shadow: 0px 0px 80px 0px #FFA30199;
+  background: #19100A;
+  border: 1px solid #FFD01B;
+  box-shadow: 0 0 60px 30px #FFD01B1A;
   border-radius: 28px;
   text-align: left;
-  border-radius: 60px !important; 
+  border-radius: 60px !important;
 }
 .fe_pro_offer_chip {
-  background: rgb(255 255 255);
+  background: linear-gradient(180deg, #FFA11D 0%, #FF4D00 121.87%);
   border-radius: 90px;
-  padding: 8px 24px;
+  padding: 6px 24px;
   margin-top: 8px;
-  color: #FF5D06;
+  margin-bottom: 16px;
+  color: #fff;
 }
 .fe_pro_offer_price {
   display: block;
   margin: 10px 0 0;
+  background: linear-gradient(180deg, #FFA11D 0%, #FF4D00 121.87%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .fe_pro_offer_list {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
   text-align: left;
   margin: 0 auto;
-  padding: 44px 44px 40px;
+  padding: 50px 44px 50px;
+  border-style: solid;
+  border-width: 1px 0 0;
+  border-image: linear-gradient(90deg, #18100A 0%, #FFD01B 49.11%, #18100A 100.15%) 1;
 }
 .price-over {
 text-decoration: line-through;
-font-size: 40px;
+font-size: 0.6em;
 font-weight: 800;
 color: #fff;
 opacity: 30%;
+-webkit-text-fill-color: #fff;
 }
 .fe_pro_offer_item {
   display: flex;
   align-items: flex-start;
   gap: 12px;
+  line-height: 1.4;
+}
+.fe_pro_offer_item img {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  margin-top: 3px;
 }
 .fe_offer_check {
   width: 22px;
@@ -2430,6 +2449,11 @@ opacity: 30%;
 }
 
 @media (max-width: 575px) {
+  .fe_pro_offer_tag {
+    top: -45px;
+    min-width: 180px;
+    height: 45px;
+}
   br{
     display: none;
   }
@@ -2522,8 +2546,11 @@ opacity: 30%;
 }
 
 @media (max-width: 575px) {
+  .fe-pro-card-price {
+    padding: 28px 24px 22px;
+  }
   .fe_pro_offer_list {
-    padding: 24px 24px 20px;
+    padding: 26px 24px 32px;
 }
 .rv-main-price{
   padding: 20px 20px;
@@ -2564,6 +2591,11 @@ opacity: 30%;
   }
 }
 
+@media (max-width: 480px) {
+  .fe_feature_icon img {
+    max-height: 60px;
+}
+}
 @media (max-width: 400px) {
   .fe-big-btn {
     padding: 13px 16px;
@@ -2772,3 +2804,9 @@ opacity: 30%;
     }
   }
 /* ===================== END SITE FOOTER ===================== */
+.forgeContainer a.btn-forge.btn-forge-continue {
+    color: red !important;
+}
+.forgeContainer a.btn-forge {
+  border-color: #ffffff !important;
+}
