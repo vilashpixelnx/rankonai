@@ -200,7 +200,7 @@ button {
 /* re usable css end  */
 /* banner section start */
 .fe_banner_wrap{
-    background: url(../images/banner/banner_bg.jpg) no-repeat center center/cover;
+    background: url(../images/banner/banner_bg.webp) no-repeat center center/cover;
     position: relative;
     isolation: isolate;
 }
@@ -1679,8 +1679,9 @@ button {
 }
 
 .fe_price_card_right {
-  background: linear-gradient(180deg, #FFA11D 0%, #FF4D00 121.87%);
-  box-shadow: 0 0 80px 0 #FFA30199;
+  background: #19100A;
+  border: 1px solid #FFD01B;
+  box-shadow: 0 0 60px 30px #FFD01B1A;
 }
 
 .fe_price_badge {
@@ -1716,8 +1717,6 @@ button {
   border-radius: 90px;
   padding: 2px 22px;
   margin-bottom: 16px;
-  background: #FFFFFF;
-  color: #FF5D06;
 }
 
 .fe_price_amount {
@@ -1742,7 +1741,7 @@ button {
 }
 
 .fe_price_card_right .fe_price_divider {
-  background: linear-gradient(90deg, #FF9218 0%, #FFFFFF 49.11%, #FF9017 100.15%);
+  background: linear-gradient(90deg, #18100A 0%, #FFD01B 49.11%, #18100A 100.15%);
 }
 
 .fe_price_body {
