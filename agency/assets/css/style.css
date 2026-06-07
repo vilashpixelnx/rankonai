@@ -3203,12 +3203,10 @@ button {
     }
   }
 /* ===================== END SITE FOOTER ===================== */
-
-
-
-
-a.btn-forge.btn-forge-continue {
-    display: none;
+.forgeContainer .btn-forge-continue, .forgeContainer .btn-forge-continue * {
+    color: #cbd5e1 !important;
+    opacity: 1 !important;
+    border-color: #cbd5e1 !important;
 }
 
 /* ============================================================
