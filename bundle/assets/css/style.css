@@ -34,6 +34,7 @@ body {
     overflow-x: hidden;
     background-color: var(--white-color);
     color: var(--white-color);
+      padding-bottom: 0 !important;
 }
 html {
     scroll-behavior: smooth;
@@ -3176,3 +3177,12 @@ a.btn-forge.btn-forge-continue {
         transition: none;
     }
 }
+
+.hs_stickybar_wrapper {
+    font-family: 'Nunito', sans-serif;
+    -webkit-animation: stickybar_anim 0.3s;
+    -moz-animation: stickybar_anim 0.3s;
+    animation: stickybar_anim 0.3s;
+    display: none;
+}
+

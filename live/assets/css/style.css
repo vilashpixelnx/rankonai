@@ -34,6 +34,7 @@ body {
     overflow-x: hidden;
     background-color: var(--white-color);
     color: var(--white-color);
+  padding-bottom: 0 !important;
 }
 html {
     scroll-behavior: smooth;
@@ -3179,4 +3180,7 @@ a.btn-forge.btn-forge-continue {
         transform: none;
         transition: none;
     }
+}
+.hs_stickybar_wrapper.sticky-Bottom {
+    display: none;
 }

@@ -18,7 +18,7 @@ Project:
             this.FooterCopyright();
             this.FAQAccordion();
             this.RevealOnScroll();
-
+            this.StickyHeader();
         },
 
         /*---------------------- ShowcaseAI Functions Calling ----------------------*/
@@ -137,7 +137,23 @@ Project:
             });
         },
 
-
+                // Sticky Header - appears when scrolling down
+        StickyHeader: function() {
+            var $header = $('#fe_stickyHeader');
+            if (!$header.length) {
+                return;
+            }
+            var showAfter = 400; // px scrolled before header appears
+            var toggle = function() {
+                if ($(window).scrollTop() > showAfter) {
+                    $header.addClass('is-visible');
+                } else {
+                    $header.removeClass('is-visible');
+                }
+            };
+            toggle();
+            $(window).on('scroll', toggle);
+        },
 
 
 
