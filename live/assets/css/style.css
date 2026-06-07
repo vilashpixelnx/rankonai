@@ -1730,7 +1730,36 @@ button {
 .fe_price_card_right .fe_price_old {
   color: rgba(255, 255, 255, 0.55);
 }
+.fe_perfect_for {
+    background: linear-gradient(180deg, #ff8b24 0%, #ff8413 91.23%);
+    border-radius: 20px;
+    position: relative;
+    margin-top: 20px;
+    padding-top: 25px;
+    padding: 30px 20px 20px;
+    box-shadow: 0px 6px 15px 0px #00000033;
+}
 
+.fe_perfect_for > p {
+  min-height: 30px;
+  background: #ffffff;
+  border-radius: 60px;
+  padding: 5px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ff7900;
+  position: absolute;
+  top: -15px;
+  left: 40px;
+}
+.fe_price_card_left  .fe_perfect_for {
+    margin: 50px 0 30px;
+    background: #fff;
+}
+.fe_price_card_left .fe_perfect_for > p {
+    background: #ff8413;
+    color: #fff;
+}
 /* divider between header and body */
 .fe_price_divider {
   display: block;
@@ -2739,6 +2768,11 @@ button {
 }
 }
 @media (max-width: 480px) {
+  .fe_perfect_for > p {
+    font-size: 15px;
+    left: 0;
+    right: 0;
+}
   /* swap to the mobile "without" image */
   .fe_without_desktop {
     display: none;
