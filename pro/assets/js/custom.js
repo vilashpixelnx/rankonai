@@ -18,6 +18,7 @@ Project:
             this.FooterCopyright();
             this.FaqAccordion();
             this.StickyPromoBar();
+            this.StickyHeader();
 
         },
 
@@ -91,6 +92,25 @@ FaqAccordion: function() {
             };
             tick();
             setInterval(tick, 1000);
+        },
+
+        // Sticky Scroll Header (Pro page) - show after scrolling down
+        StickyHeader: function() {
+            var $header = $('#fe_stickyHeader');
+            if (!$header.length) {
+                return;
+            }
+
+            var showAfter = 600; // px scrolled before header appears
+            var toggle = function() {
+                if ($(window).scrollTop() > showAfter) {
+                    $header.addClass('is-visible');
+                } else {
+                    $header.removeClass('is-visible');
+                }
+            };
+            toggle();
+            $(window).on('scroll', toggle);
         },
 
 

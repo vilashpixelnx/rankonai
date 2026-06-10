@@ -1,0 +1,225 @@
+body {
+  font-family: "Inter", sans-serif;
+  color: #838392;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+.mt-btn {
+  display: inline-block;
+  min-width: 140px;
+  background: linear-gradient(135deg, #ffaa40 0%, #ff55a7 100%);
+  color: #fff;
+  text-transform: capitalize;
+  outline: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  border-radius: 50px;
+  transition: 0.3s;
+  max-width: max-content;
+  line-height: normal;
+  position: relative;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+.mt-btn:focus {
+  outline: none;
+}
+.mt-btn:hover {
+  box-shadow: 0px 0px 30px 0px rgb(57 65 72 / 30%);
+  transform: scale(1.06);
+  text-decoration: none;
+}
+.mt-btn:hover,
+.mt-btn.mt-btn-reverse {
+  background: #394148;
+  color: #fff;
+}
+.mt-btn.mt-btn-reverse:hover {
+  background: #ff55a7;
+  color: #fff;
+}
+img {
+  height: auto;
+  max-width: 100%;
+}
+a {
+  transition: 0.3s;
+}
+a:hover {
+  text-decoration: none;
+  color: #fe9645;
+}
+.mt-spacer-top {
+  padding-top: 100px;
+}
+.mt-spacer-bottom {
+  padding-bottom: 100px;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+/* main css start */
+.mt-product-title {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #394148;
+}
+.mt-product-worth {
+  color: #ff55a7;
+  font-weight: 900;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.mt-product-content .mt-btn {
+  margin-top: 20px;
+  margin-right: 10px;
+}
+.mt-product-img img {
+  border-radius: 10px;
+}
+.mt-bonus-product-wrap ul li {
+  display: block;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #ccc;
+}
+.mt-bonus-product-wrap ul li:last-child {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+.mt-bonus-product-wrap .row {
+  align-items: center;
+}
+.mt-product-has-tag {
+  font-weight: 700;
+  color: #fff;
+  font-size: 20px;
+  background: linear-gradient(135deg, #ffaa40 0%, #ff55a7 100%);
+  max-width: fit-content;
+  max-width: -moz-fit-content;
+  border-radius: 30px;
+  padding: 5px 20px;
+  margin-bottom: 6px;
+  margin-right: 10px;
+}
+/* main css end */
+
+/* header start */
+.mt-bonus-logo img {
+  width: 300px;
+  max-width: 80%;
+  height: auto;
+}
+.mt-bonus-header {
+  padding: 50px 0 38px;
+  background: url(../images/header-bg.jpg);
+  text-align: center;
+}
+.mt-bonus-header .row,
+.mt-bonus-copyright .row {
+  align-items: center;
+}
+.mt-bonus-head-title h3 {
+  margin: 25px 0 0px;
+  color: #fff;
+  font-size: 36px;
+}
+/* header end */
+
+/* copyright start */
+.mt-bonus-copyright {
+  padding: 10px 0px;
+  background-color: rgb(1 3 5);
+}
+.mt-bonus-copyright p,
+.mt-bonus-copyright ul li a {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+}
+.mt-bonus-copyright ul li a:hover {
+  color: #fe9645;
+}
+.mt-bonus-copyright ul li {
+  display: inline-block;
+  position: relative;
+  padding-right: 20px;
+}
+.mt-bonus-copyright ul li:after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  top: 0;
+  bottom: 0;
+  height: 10px;
+  width: 2px;
+  background: #ffffff;
+  margin: auto;
+}
+.mt-bonus-copyright ul li:last-child {
+  padding-right: 0;
+}
+.mt-bonus-copyright ul li:last-child:after {
+  display: none;
+}
+/* copyright end */
+
+/* responsive css start */
+@media screen and (max-width: 991px) {
+  .mt-product-content,
+  .mt-product-img {
+    padding: 30px 0;
+  }
+  .mt-bonus-product-wrap ul li {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+  }
+  .mt-spacer-top {
+    padding-top: 50px;
+  }
+  .mt-spacer-bottom {
+    padding-bottom: 50px;
+  }
+  .mt-product-title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #394148;
+  }
+  .mt-copyright-menu-list,
+  .mt-bonus-copyright p {
+    text-align: center;
+  }
+  .sp_order2 {
+    order: 2;
+  }
+  .sp_order1 {
+    order: 1;
+  }
+}
+@media screen and (max-width: 480px) {
+  .mt-product-has-tag {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .mt-bonus-head-title h3 {
+    font-size: 30px;
+  }
+  .mt-bonus-header {
+    padding: 45px 0 38px;
+  }
+}
+/* responsive css end */
